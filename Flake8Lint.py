@@ -205,8 +205,8 @@ class Flake8LintSettings(object):
         # turn on flake8-debugger error lint
         self.debugger = bool(self.settings.get('debugger', True))
 
-        # turn on import order error lint
-        self.import_order = bool(self.settings.get('import-order', True))
+        # turn on import order error lint if specified
+        self.import_order = bool(self.settings.get('import-order', False))
 
         # get import order style
         import_order_style = self.settings.get('import-order-style')
